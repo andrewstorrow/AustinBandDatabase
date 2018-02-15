@@ -17,6 +17,7 @@ namespace AustinBandDatabase.Controllers
             _bandRepository = new BandRepository();
         }
 
+        // GET: Band
         public ActionResult Index()
         {
             var bands = _bandRepository.GetBands();
@@ -24,9 +25,18 @@ namespace AustinBandDatabase.Controllers
             return View(bands);
         }
 
-        public ActionResult Details(int id)
+
+        // GET: Band/Detail/Id
+        public ActionResult Detail(int? id)
         {
-            return View ();
+            if (id == null)
+            {
+                return HttpNotFound();
+            }
+
+            var band = _bandRepository.GetBand(id.Value);
+
+            return View(band);
         }
     }
 }

@@ -1,0 +1,11 @@
+﻿@model AustinBandDatabase.Models.Band
+
+@{
+    ViewBag.Title = Model.Name;
+}
+
+<h2>@Model.Name</h2>
+
+Genre
+Year Formed: @Model.YearFormed
+<div>@Html.Raw(Model.DescriptionHtml)</div>

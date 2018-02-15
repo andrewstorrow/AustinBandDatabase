@@ -88,6 +88,7 @@
     <Content Include="Content\abd-bootstrap.min.css" />
     <Content Include="Scripts\abd-bootstrap.min.js" />
     <Content Include="Content\abd-site.css" />
+    <Content Include="Views\Band\Detail.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
