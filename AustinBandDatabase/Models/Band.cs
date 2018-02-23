@@ -9,9 +9,10 @@ namespace AustinBandDatabase.Models
 
         public string Name { get; set; }
 
-        [Display(Name = "Year Formed"), DataType(DataType.Date)]
-        public DateTime YearFormed { get; set; }
+        [Display(Name = "Year Formed")]
+        public string YearFormed { get; set; }
 
+        [Display(Name = "Description")]
         public string DescriptionHtml { get; set; }
     }
 }

@@ -1,0 +1,41 @@
+﻿@model AustinBandDatabase.Models.Band
+
+@{
+    ViewBag.Title = "Add Band";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (@Html.BeginForm())
+{
+    <div class="row">
+        <div class="col-md-12">
+            <!--Name-->
+            <div class="form-group">
+                @Html.LabelFor(m => m.Name, new { @class = "control-label" })
+                @Html.TextBoxFor(m => m.Name, "{0:d}", new { @class = "form-control"})
+            </div>
+
+            <!--Year Formed-->
+            <div class="form-group">
+                @Html.LabelFor(m => m.YearFormed, new { @class = "control-label" })
+                @Html.TextBoxFor(m => m.YearFormed, "{0:d}", new { @class = "form-control"})
+            </div>
+
+            <!--DescriptionHtml-->
+            <div class="form-group">
+                @Html.LabelFor(m => m.DescriptionHtml, new { @class = "control-label" })
+                @Html.TextAreaFor(m => m.DescriptionHtml, 14, 20, new { @class = "form-control"})
+            </div>
+
+            <div class="pad-top">
+                <button type="submit" class="btn btn-success btn-lg margin-right">
+                    <span class="glyphicon glyphicon-save"></span> Save
+                </button>
+                <a href="@Url.Action("Index")" class="btn btn-warning btn-lg">
+                    <span class="glyphicon glyphicon-remove"></span> Cancel
+                </a>
+            </div>
+        </div>
+    </div>
+}

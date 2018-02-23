@@ -25,7 +25,6 @@ namespace AustinBandDatabase.Controllers
             return View(bands);
         }
 
-
         // GET: Band/Detail/Id
         public ActionResult Detail(int? id)
         {
@@ -35,6 +34,26 @@ namespace AustinBandDatabase.Controllers
             }
 
             var band = _bandRepository.GetBand(id.Value);
+
+            return View(band);
+        }
+
+        // GET: Band/Add
+        public ActionResult Add()
+        {
+            return View();
+        }
+
+        // POST: Band/Add
+        [HttpPost]
+        public ActionResult Add(Band band)
+        {
+            if(ModelState.IsValid)
+            {
+                _bandRepository.AddBand(band);
+
+                return RedirectToAction("Index");
+            }
 
             return View(band);
         }
