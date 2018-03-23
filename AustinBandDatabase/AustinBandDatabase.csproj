@@ -90,6 +90,12 @@
     <Content Include="Content\abd-site.css" />
     <Content Include="Views\Band\Detail.cshtml" />
     <Content Include="Views\Band\Add.cshtml" />
+    <Content Include="Scripts\abd-jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\abd-jquery-1.10.2.js" />
+    <Content Include="Scripts\abd-jquery-1.10.2.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\abd-jquery-1.10.2.min.map" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
